@@ -250,9 +250,7 @@ class FlutterPolls extends HookWidget {
               if (hasVoted && userVotedOptionId == null) {
                 throw ('>>>Flutter Polls: User has voted but [userVotedOptionId] is null.<<<');
               } else {
-                return AnimatedSwitcher(
-                  duration: const Duration(milliseconds: 300),
-                  child: userHasVoted.value || hasPollEnded.value
+                return userHasVoted.value || hasPollEnded.value
                       ? Container(
                           key: UniqueKey(),
                           margin: EdgeInsets.only(
@@ -377,7 +375,7 @@ class FlutterPolls extends HookWidget {
                               ),
                             ),
                           ),
-                        ),
+                        
                 );
               }
             },
